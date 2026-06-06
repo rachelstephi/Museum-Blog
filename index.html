@@ -1,526 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Museum — Art & Culture</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">MUSEUM</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#exhibitions">Exhibitions</a></li>
-        <li><a href="#collection">Collection</a></li>
-        <li><a href="#visit">Visit</a></li>
-        <li><a href="#news">News</a></li>
-      </ul>
-      <a href="#tickets" class="nav-btn">Get Tickets</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="nav-item active">Museo Sans</a>
+            <a href="#" class="nav-item">Collections</a>
+            <a href="#" class="nav-item">Our mission</a>
+            <a href="#" class="nav-item">Events</a>
+        </div>
+        <button class="contact-btn">Contact now</button>
+    </nav>
 
-  <div class="mobile-nav" id="mobileNav">
-    <button class="mobile-nav-close" id="mobileClose">&#10005;</button>
-    <ul>
-      <li><a href="#about" onclick="closeMobileNav()">About</a></li>
-      <li><a href="#exhibitions" onclick="closeMobileNav()">Exhibitions</a></li>
-      <li><a href="#collection" onclick="closeMobileNav()">Collection</a></li>
-      <li><a href="#visit" onclick="closeMobileNav()">Visit</a></li>
-      <li><a href="#news" onclick="closeMobileNav()">News</a></li>
-      <li><a href="#tickets" class="mobile-nav-btn" onclick="closeMobileNav()">Get Tickets</a></li>
-    </ul>
-  </div>
-
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-tag">
-        <span class="tag-dot"></span>
-        <span>Open Now — Summer Exhibition 2024</span>
-      </div>
-      <h1 class="hero-title">Art That<br />Moves The<br /><em>World.</em></h1>
-      <p class="hero-desc">Explore centuries of human creativity. From ancient civilizations to contemporary masterworks — all under one iconic roof.</p>
-      <div class="hero-actions">
-        <a href="#exhibitions" class="btn-primary">Explore Now <span class="btn-arrow">&#8594;</span></a>
-        <a href="#visit" class="btn-link">Plan Your Visit</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="stat-number">50K+</span>
-          <span class="stat-label">Artworks</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="stat-number">130+</span>
-          <span class="stat-label">Years Legacy</span>
-        </div>
-        <div class="hero-stat-divider"></div>
-        <div class="hero-stat">
-          <span class="stat-number">2M</span>
-          <span class="stat-label">Visitors / Year</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-img-main">
-        <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=700&q=85" alt="Art Gallery" />
-        <div class="hero-img-badge">
-          <span class="badge-label">Featured</span>
-          <span class="badge-title">The Impressionist Era</span>
-          <span class="badge-sub">Gallery 4 — Level 2</span>
-        </div>
-      </div>
-      <div class="hero-img-small">
-        <img src="https://images.unsplash.com/photo-1554188248-986adbb73be4?w=400&q=85" alt="Sculpture" />
-      </div>
-    </div>
-  </section>
-
-  <div class="marquee-strip">
-    <div class="marquee-track">
-      <div class="marquee-inner">
-        <span>Exhibitions Open Daily</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Free Entry Every Friday</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>New: The Impressionist Era</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Guided Tours Available</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Members Save 20%</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Exhibitions Open Daily</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Free Entry Every Friday</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>New: The Impressionist Era</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Guided Tours Available</span>
-        <span class="marquee-dot">&#9679;</span>
-        <span>Members Save 20%</span>
-        <span class="marquee-dot">&#9679;</span>
-      </div>
-    </div>
-  </div>
-
-  <section class="about" id="about">
-    <div class="about-media">
-      <div class="about-img-wrap">
-        <img src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=600&q=85" alt="Museum Interior" class="about-img" />
-      </div>
-      <div class="about-float-card">
-        <div class="float-num">1892</div>
-        <div class="float-text">Year Founded</div>
-      </div>
-      <div class="about-img-thumb">
-        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=300&q=85" alt="Detail" />
-      </div>
-    </div>
-    <div class="about-content">
-      <p class="section-eyebrow">Our Story</p>
-      <h2 class="section-title">A Home for Art<br />& Human <em>History</em></h2>
-      <p class="about-text">Since 1892, we've been dedicated to preserving and celebrating the full spectrum of human creative achievement — from ancient artifacts to living artists who are defining tomorrow's culture.</p>
-      <p class="about-text">Our galleries span 12 dedicated spaces, each crafted to offer an immersive encounter with art, history, and ideas.</p>
-      <div class="about-features">
-        <div class="about-feature">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-          </div>
-          <div>
-            <div class="feature-title">12 Galleries</div>
-            <div class="feature-desc">Spanning five floors of curated art history</div>
-          </div>
-        </div>
-        <div class="about-feature">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div>
-            <div class="feature-title">Daily Tours</div>
-            <div class="feature-desc">Expert-led experiences for all ages</div>
-          </div>
-        </div>
-        <div class="about-feature">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          </div>
-          <div>
-            <div class="feature-title">200K Library</div>
-            <div class="feature-desc">Volumes open to scholars and public</div>
-          </div>
-        </div>
-        <div class="about-feature">
-          <div class="feature-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <div>
-            <div class="feature-title">Award Winning</div>
-            <div class="feature-desc">Recognized globally for excellence</div>
-          </div>
-        </div>
-      </div>
-      <a href="#exhibitions" class="btn-primary">Discover More <span class="btn-arrow">&#8594;</span></a>
-    </div>
-  </section>
-
-  <section class="exhibitions" id="exhibitions">
-    <div class="exhibitions-header">
-      <div>
-        <p class="section-eyebrow">On Display</p>
-        <h2 class="section-title">Current<br /><em>Exhibitions</em></h2>
-      </div>
-      <a href="#" class="view-all-link">View All Exhibitions <span>&#8594;</span></a>
-    </div>
-    <div class="exhibitions-grid">
-      <div class="ex-card ex-card--large">
-        <div class="ex-card-img">
-          <img src="https://images.unsplash.com/photo-1569091791842-7cfb64e04797?w=800&q=85" alt="Impressionist Era" />
-          <div class="ex-overlay">
-            <span class="ex-tag">Featured</span>
-            <div class="ex-overlay-content">
-              <h3>The Impressionist Era</h3>
-              <p>Jan 12 – Sep 30, 2024</p>
-              <a href="#" class="ex-cta">View Exhibition &#8594;</a>
+    <main class="grid-container">
+        <section class="card tall-card">
+            <span class="tag">CONGREVE STREET</span>
+            <h1>Birmingham <u>Museums.</u></h1>
+            <div class="img-container">
+                <img src="https://picsum.photos/id/1018/600/800" alt="Birmingham Street">
             </div>
-          </div>
-        </div>
-        <div class="ex-card-body">
-          <span class="ex-category">Painting</span>
-          <h3 class="ex-title">The Impressionist Era</h3>
-          <p class="ex-date">Jan 12 – Sep 30, 2024</p>
-        </div>
-      </div>
-
-      <div class="ex-card">
-        <div class="ex-card-img">
-          <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&q=85" alt="Forms & Figures" />
-          <div class="ex-overlay">
-            <span class="ex-tag">Sculpture</span>
-            <div class="ex-overlay-content">
-              <h3>Forms & Figures</h3>
-              <p>Mar 5 – Jul 20, 2024</p>
-              <a href="#" class="ex-cta">View Exhibition &#8594;</a>
+            <div class="card-footer">
+                <span>GET STARTED</span>
+                <span>&rarr;</span>
             </div>
-          </div>
-        </div>
-        <div class="ex-card-body">
-          <span class="ex-category">Sculpture</span>
-          <h3 class="ex-title">Forms & Figures</h3>
-          <p class="ex-date">Mar 5 – Jul 20, 2024</p>
-        </div>
-      </div>
+        </section>
 
-      <div class="ex-card">
-        <div class="ex-card-img">
-          <img src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=500&q=85" alt="Light & Shadow" />
-          <div class="ex-overlay">
-            <span class="ex-tag">Photography</span>
-            <div class="ex-overlay-content">
-              <h3>Light & Shadow</h3>
-              <p>Apr 1 – Oct 15, 2024</p>
-              <a href="#" class="ex-cta">View Exhibition &#8594;</a>
+        <section class="card wide-card">
+            <div class="content-split">
+                <div class="text-side">
+                    <span class="tag">EUROPEANA</span>
+                    <h2>A Woman Slicing <u>Bread.</u></h2>
+                    <p class="meta-text">DATE: 1800. INSTITUTION: RIJKSMUSEUM. PROVIDER: RIJKSMUSEUM. PROVIDING COUNTRY: NETHERLANDS. PUBLIC DOMAIN. PHOTO BY EUROPEANA.</p>
+                </div>
+                <div class="img-container small-img">
+                    <img src="https://picsum.photos/id/225/400/300" alt="Woman Slicing Bread">
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="ex-card-body">
-          <span class="ex-category">Photography</span>
-          <h3 class="ex-title">Light & Shadow</h3>
-          <p class="ex-date">Apr 1 – Oct 15, 2024</p>
-        </div>
-      </div>
+            <div class="card-footer">
+                <span>GET STARTED</span>
+                <span>&rarr;</span>
+            </div>
+        </section>
 
-      <div class="ex-card">
-        <div class="ex-card-img">
-          <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=500&q=85" alt="Color Theory" />
-          <div class="ex-overlay">
-            <span class="ex-tag">Modern Art</span>
-            <div class="ex-overlay-content">
-              <h3>Color Theory</h3>
-              <p>May 10 – Nov 1, 2024</p>
-              <a href="#" class="ex-cta">View Exhibition &#8594;</a>
+        <section class="card accent-card">
+            <div class="img-container portrait-img">
+                <img src="https://picsum.photos/id/64/400/250" alt="Portrait">
             </div>
-          </div>
-        </div>
-        <div class="ex-card-body">
-          <span class="ex-category">Modern Art</span>
-          <h3 class="ex-title">Color Theory</h3>
-          <p class="ex-date">May 10 – Nov 1, 2024</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="portrait-header">
+                <h2 class="hover-underline">Portrait</h2>
+                <div class="dots">...</div>
+            </div>
+            <p class="meta-text">PORTRAIT OF MARITGE CLAESDR VOOGHT. DATE: 1639. INSTITUTION: RIJKSMUSEUM. PROVIDER: RIJKSMUSEUM. PROVIDING COUNTRY: NETHERLANDS. PUBLIC DOMAIN</p>
+            <div class="card-footer">
+                <span>GET STARTED</span>
+                <span>&rarr;</span>
+            </div>
+        </section>
 
-  <section class="collection" id="collection">
-    <div class="collection-inner">
-      <div class="collection-text">
-        <p class="section-eyebrow section-eyebrow--light">Permanent Collection</p>
-        <h2 class="section-title section-title--light">Explore 50,000<br /><em>Works of Art</em></h2>
-        <p class="collection-desc">From ancient artefacts to 21st-century installations — our permanent collection represents the full arc of human creativity across five millennia.</p>
-        <a href="#" class="btn-light">Browse Collection <span class="btn-arrow">&#8594;</span></a>
-      </div>
-      <div class="collection-grid">
-        <div class="col-card">
-          <div class="col-card-img">
-            <img src="https://images.unsplash.com/photo-1534349762230-e0cadf78f5da?w=350&q=85" alt="Chromatic Reverie" />
-            <div class="col-hover">
-              <button class="col-view-btn">View Work</button>
+        <section class="card vintage-card">
+            <div class="header-row">
+                <span class="tag">EUROPEANA</span>
+                <div class="circle-avatar"></div>
             </div>
-          </div>
-          <div class="col-card-body">
-            <span class="col-num">001</span>
-            <h4 class="col-name">Chromatic Reverie</h4>
-            <p class="col-artist">Lena Hoffmann, 1974</p>
-          </div>
-        </div>
-        <div class="col-card">
-          <div class="col-card-img">
-            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=350&q=85" alt="Abstract No.7" />
-            <div class="col-hover">
-              <button class="col-view-btn">View Work</button>
+            <h2>Vintage <u>Painting.</u></h2>
+            <p class="meta-text">PORTRAIT OF A MAN. DATE: 1648. INSTITUTION: RIJKSMUSEUM. PROVIDER: RIJKSMUSEUM. PROVIDING COUNTRY: NETHERLANDS. PUBLIC DOMAIN</p>
+            <div class="info-table">
+                <div class="row"><span>PUBLIC DOMAIN</span><span>NETHERLANDS</span></div>
             </div>
-          </div>
-          <div class="col-card-body">
-            <span class="col-num">002</span>
-            <h4 class="col-name">Abstract No. 7</h4>
-            <p class="col-artist">Marcus Bell, 1961</p>
-          </div>
-        </div>
-        <div class="col-card">
-          <div class="col-card-img">
-            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=350&q=85" alt="Golden Meridian" />
-            <div class="col-hover">
-              <button class="col-view-btn">View Work</button>
+            <div class="card-footer">
+                <span>GET STARTED</span>
+                <span>&rarr;</span>
             </div>
-          </div>
-          <div class="col-card-body">
-            <span class="col-num">003</span>
-            <h4 class="col-name">Golden Meridian</h4>
-            <p class="col-artist">Sofia Reyes, 2002</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="events" id="news">
-    <div class="events-header">
-      <p class="section-eyebrow">What's On</p>
-      <h2 class="section-title">Upcoming<br /><em>Events</em></h2>
-      <a href="#" class="view-all-link">View All Events <span>&#8594;</span></a>
-    </div>
-    <div class="events-list">
-      <div class="event-row">
-        <div class="event-date">
-          <span class="event-month">JUN</span>
-          <span class="event-day">14</span>
-        </div>
-        <div class="event-info">
-          <span class="event-tag">Talk</span>
-          <h3 class="event-title">The Future of Museums in the Digital Age</h3>
-          <p class="event-meta">7:00 PM &nbsp;·&nbsp; Main Auditorium</p>
-        </div>
-        <a href="#" class="event-link">Register <span>&#8594;</span></a>
-      </div>
-      <div class="event-row">
-        <div class="event-date">
-          <span class="event-month">JUN</span>
-          <span class="event-day">21</span>
-        </div>
-        <div class="event-info">
-          <span class="event-tag">Workshop</span>
-          <h3 class="event-title">Abstract Painting Masterclass with Aria Chen</h3>
-          <p class="event-meta">2:00 PM &nbsp;·&nbsp; Studio 3, Level 1</p>
-        </div>
-        <a href="#" class="event-link">Register <span>&#8594;</span></a>
-      </div>
-      <div class="event-row">
-        <div class="event-date">
-          <span class="event-month">JUL</span>
-          <span class="event-day">04</span>
-        </div>
-        <div class="event-info">
-          <span class="event-tag">Tour</span>
-          <h3 class="event-title">Moonlight Gallery Tour — After Hours Experience</h3>
-          <p class="event-meta">9:00 PM &nbsp;·&nbsp; All Galleries</p>
-        </div>
-        <a href="#" class="event-link">Register <span>&#8594;</span></a>
-      </div>
-      <div class="event-row">
-        <div class="event-date">
-          <span class="event-month">JUL</span>
-          <span class="event-day">19</span>
-        </div>
-        <div class="event-info">
-          <span class="event-tag">Opening</span>
-          <h3 class="event-title">New Acquisition: The Meridian Collection Unveiling</h3>
-          <p class="event-meta">6:00 PM &nbsp;·&nbsp; East Wing</p>
-        </div>
-        <a href="#" class="event-link">Register <span>&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="visit" id="visit">
-    <div class="visit-inner">
-      <div class="visit-content">
-        <p class="section-eyebrow">Find Us</p>
-        <h2 class="section-title">Plan Your<br /><em>Visit</em></h2>
-        <div class="visit-info-list">
-          <div class="visit-info-row">
-            <div class="visit-info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div>
-              <p class="visit-info-label">Opening Hours</p>
-              <p class="visit-info-value">Mon – Thu: 10am – 6pm</p>
-              <p class="visit-info-value">Fri – Sun: 10am – 9pm</p>
-            </div>
-          </div>
-          <div class="visit-info-row">
-            <div class="visit-info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="visit-info-label">Address</p>
-              <p class="visit-info-value">12 Museum Boulevard</p>
-              <p class="visit-info-value">New York, NY 10001</p>
-            </div>
-          </div>
-          <div class="visit-info-row">
-            <div class="visit-info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-            </div>
-            <div>
-              <p class="visit-info-label">Admission</p>
-              <p class="visit-info-value">Adults $25 · Students $12</p>
-              <p class="visit-info-value">Free every Friday 5–9pm</p>
-            </div>
-          </div>
-        </div>
-        <a href="#tickets" class="btn-primary" id="tickets">Get Tickets <span class="btn-arrow">&#8594;</span></a>
-      </div>
-      <div class="visit-map">
-        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=900&q=80" alt="Museum Location Map" />
-        <div class="visit-map-pin">
-          <svg width="32" height="40" viewBox="0 0 32 40" fill="none">
-            <path d="M16 0C7.163 0 0 7.163 0 16c0 12 16 24 16 24S32 28 32 16C32 7.163 24.837 0 16 0z" fill="#1a1a1a"/>
-            <circle cx="16" cy="16" r="6" fill="#F5F0E8"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="newsletter">
-    <div class="newsletter-inner">
-      <div class="newsletter-text">
-        <p class="section-eyebrow section-eyebrow--light">Stay Connected</p>
-        <h2 class="section-title section-title--light">Never Miss an<br /><em>Opening Night.</em></h2>
-      </div>
-      <div class="newsletter-form-wrap">
-        <p class="newsletter-sub">Subscribe for exhibition previews, exclusive events & member offers.</p>
-        <div class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="Enter your email address" />
-          <button class="newsletter-submit">Subscribe</button>
-        </div>
-        <p class="newsletter-note">No spam. Unsubscribe any time. We respect your privacy.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#" class="footer-logo">MUSEUM</a>
-        <p class="footer-tagline">A space where art transcends time — inspiring curiosity, dialogue, and wonder since 1892.</p>
-        <div class="footer-socials">
-          <a href="#" class="social-icon" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="#" class="social-icon" aria-label="Twitter">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-          </a>
-          <a href="#" class="social-icon" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" class="social-icon" aria-label="YouTube">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">Explore</h4>
-        <ul class="footer-links">
-          <li><a href="#">Exhibitions</a></li>
-          <li><a href="#">Permanent Collection</a></li>
-          <li><a href="#">Virtual Tours</a></li>
-          <li><a href="#">Digital Archive</a></li>
-          <li><a href="#">Art Talks</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">Visit</h4>
-        <ul class="footer-links">
-          <li><a href="#">Hours & Admission</a></li>
-          <li><a href="#">Getting Here</a></li>
-          <li><a href="#">Accessibility</a></li>
-          <li><a href="#">Group Bookings</a></li>
-          <li><a href="#">Museum Shop</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">About</h4>
-        <ul class="footer-links">
-          <li><a href="#">Our History</a></li>
-          <li><a href="#">Mission & Values</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Donate</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2024 The Museum. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Cookie Settings</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    window.addEventListener('scroll', function () {
-      var nb = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        nb.classList.add('scrolled');
-      } else {
-        nb.classList.remove('scrolled');
-      }
-    });
-
-    document.getElementById('hamburger').addEventListener('click', function () {
-      document.getElementById('mobileNav').classList.add('open');
-    });
-
-    document.getElementById('mobileClose').addEventListener('click', function () {
-      closeMobileNav();
-    });
-
-    function closeMobileNav() {
-      document.getElementById('mobileNav').classList.remove('open');
-    }
-  </script>
+        </section>
+    </main>
 
 </body>
 </html>
