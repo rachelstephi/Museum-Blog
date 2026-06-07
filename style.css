@@ -114,3 +114,87 @@ body{
         margin:auto;
     }
 }
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    padding:40px;
+}
+
+.museum-grid{
+    display:grid;
+    place-items:center;
+}
+
+/* Card */
+.museum-card{
+    background:#f7b3a8; /* Salmon Pink */
+    width:350px;
+    overflow:hidden;
+    color:#4b2e20; /* Dark Brown */
+    padding-bottom:25px;
+}
+
+
+.image-wrapper{
+    overflow:hidden;
+}
+
+.image-wrapper img{
+    width:100%;
+    display:block;
+    transition:transform 0.6s ease;
+}
+
+.museum-card:hover .image-wrapper img{
+    transform:scale(1.12);
+}
+
+
+.content{
+    padding:24px;
+}
+
+.content h3{
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+    font-weight:500;
+}
+
+.content h1{
+    font-size:38px;
+    line-height:1.1;
+    margin-bottom:30px;
+    font-weight:500;
+    text-decoration:underline;
+    text-decoration-thickness:2px;
+    text-underline-offset:8px;
+}
+
+
+.cta{
+    text-decoration:none;
+    color:#4b2e20;
+    font-size:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-weight:500;
+}
+
+.cta span{
+    font-size:16px;
+    transition:transform 0.3s ease;
+}
+
+.cta:hover span{
+    transform:translateX(5px);
+}
